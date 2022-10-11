@@ -11,12 +11,10 @@ public class LinkedListIterator implements Iterator {
         currentNode=startNode;
     }
 
-    @Override
     public boolean hasNext(){
         return currentNode != null;
     }
 
-    @Override
     public String next(){
         String data= currentNode.data;
         currentNode=currentNode.next;
