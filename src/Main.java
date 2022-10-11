@@ -9,16 +9,17 @@ public class Main {
     {
         List listaLin = new LinkedList();
         List listaArr = new ArrayList();
+
         Iterator iterator;
 
         System.out.println("LinkedList");
-        listaLin.addAtTail("1");
-        listaLin.addAtTail("2");
-        listaLin.addAtTail("3");
+        listaLin.addAtTail("uno");
+        listaLin.addAtTail("dos");
+        listaLin.addAtTail("tres");
 
-        listaLin.addAtFront("Vital");
-        listaLin.addAtFront("Muñoz");
-        listaLin.addAtFront("Erik");
+        listaLin.addAtFront("3");
+        listaLin.addAtFront("2");
+        listaLin.addAtFront("1");
 
         iterator = listaLin.getIterator();
 

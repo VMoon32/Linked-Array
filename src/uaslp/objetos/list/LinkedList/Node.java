@@ -1,6 +1,6 @@
 package uaslp.objetos.list.LinkedList;
 
-public class Node{
+class Node{
     Node next;
     Node previous;
     String data;
