@@ -2,7 +2,7 @@ package uaslp.objetos.list.LinkedList;
 
 import uaslp.objetos.list.Iterator;
 import uaslp.objetos.list.List;
-//Node y LinkedListIterator son inner class
+//Node y LinkedListIterator son inner class de LinkedList
 
 public class LinkedList implements List {
     private Node head;
@@ -18,9 +18,13 @@ public class LinkedList implements List {
         }
     }
 
-    private static class LinkedListIterator implements Iterator {
+    public class LinkedListIterator implements Iterator {
 
         private Node currentNode;
+
+        public LinkedListIterator(){
+            this.currentNode = head;
+        }
 
         LinkedListIterator(Node startNode)
         {
@@ -139,7 +143,7 @@ public class LinkedList implements List {
 
 
     public LinkedListIterator getIterator(){
-        return new LinkedListIterator(head);
+        return new LinkedListIterator();
     }
 }
 
