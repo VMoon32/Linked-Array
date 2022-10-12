@@ -90,9 +90,19 @@ public class ArrayList implements List {
     }
 
 
-    public Iterator getIterator()
-    {
-        return new ArrayListIterator(this);
+    public Iterator getIterator(){
+        return new Iterator(){ //CLASE ANONIMA
+                                //También es una inner class no estática
+            private int currentItem = 0;
+            @Override
+            public boolean hasNext(){
+                return currentItem < size;
+            }
+            @Override
+            public String next(){
+                return array[currentItem++];
+            }
+        };
     }
 
     private void increaseArrayList(){
